@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yang6020/horror-imdb/issues"
   },
-  "homepage": "https://github.com/yang6020/horror-imdb#readme"
+  "homepage": "https://github.com/yang6020/horror-imdb#readme",
+  "dependencies": {
+    "mongoose": "^5.3.0"
+  }
 }
