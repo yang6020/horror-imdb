@@ -1,5 +1,3 @@
-
-
 <div class="container margin-top">
   <div class="row color-border">
     {{#each movies}}
@@ -10,15 +8,10 @@
         </div>
         <div class="element-caption text-center">
           <h4 class="text-center">{{this.title}}</h4>
-        <a href="/movies/{{id}}" class="btn btn-info">See More</a>
+          <a href="/movies/{{id}}" class="btn btn-info">See More</a>
         </div>
       </div>
     </div>
     {{/each}}
   </div>
 </div>
-
-{{!-- Al poner lo a href id, ese id es el que se crea automáticamente, y nos sirve de enlace para dar
-más información de las películas --}}
-
-
