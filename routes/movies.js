@@ -1,9 +1,17 @@
 const express = require('express');
 const router = express.Router();
+const Movie = require('../models/Movie');
 
-/* GET home page */
-router.get('/movies', (req, res, next) => {
-  res.render('movies');
+router.get('/', (req, res, next) => {
+  console.log(Movie);
+  Movie.find({})
+    .then(movies => {
+      console.log(movies);
+      res.render('movies', { movies });
+    })
+    .catch(e => {
+      console.log(e);
+    });
 });
 
 module.exports = router;
