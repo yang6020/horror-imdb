@@ -15,7 +15,7 @@ const movieSchema = new Schema(
       createdAt: 'created_at',
       updatedAt: 'updated_at',
     },
-  }
+  },
 );
 
 const Movie = mongoose.model('Movie', movieSchema);

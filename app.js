@@ -5,6 +5,9 @@ const path = require('path');
 const app = express();
 const favicon = require('serve-favicon');
 
+const mongoose = require('./lib/mongoose');
+
+mongoose;
 require('./express')(app);
 app.use(
   require('node-sass-middleware')({
