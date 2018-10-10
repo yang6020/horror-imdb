@@ -4,7 +4,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const favicon = require('serve-favicon');
-
+const login = require('./routes/login');
+const register = require('./routes/register');
 const mongoose = require('./lib/mongoose');
 
 mongoose;
@@ -24,5 +25,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', index);
 app.use('/movies', movies);
+app.use('/login', login);
+app.use('/register', register);
 
 module.exports = app;
