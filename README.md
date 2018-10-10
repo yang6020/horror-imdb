@@ -12,3 +12,5 @@ This app contains:
 - sessions: json webtoken
 
 - database: mongo + mongoose
+
+![Alt text](./cinema.png?raw=true 'Title')
