@@ -7,6 +7,7 @@ const favicon = require('serve-favicon');
 const login = require('./routes/login');
 const register = require('./routes/register');
 const mongoose = require('./lib/mongoose');
+const authMiddleware = require('./Middleware/authMiddleware');
 
 mongoose;
 require('./express')(app);
@@ -24,7 +25,9 @@ app.set('view engine', 'hbs');
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', index);
+// app.use('/movies', authMiddleware.validateToken, movies);
 app.use('/movies', movies);
+
 app.use('/login', login);
 app.use('/register', register);
 
